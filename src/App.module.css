@@ -7,6 +7,10 @@
   p, h1, h2, label, input, button {
     font-family: 'Libre Baskerville', serif;
   }
+
+  .Main {
+    padding-top: 81px;
+  }
   
   * {
     box-sizing: border-box;
