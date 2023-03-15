@@ -3,6 +3,10 @@
     background-color: #f8f8f8;
     min-height: 100vh;
   }
+
+  p, h1, h2, label, input, button {
+    font-family: 'Libre Baskerville', serif;
+  }
   
   * {
     box-sizing: border-box;
