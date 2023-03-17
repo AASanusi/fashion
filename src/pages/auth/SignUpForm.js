@@ -9,7 +9,6 @@ import appStyles from "../../App.module.css";
 import {
   Form,
   Button,
-  Image,
   Col,
   Row,
   Container,
@@ -123,15 +122,6 @@ const SignUpForm = () => {
             Do you have an account? <span>Sign in</span>
           </Link>
         </Container>
-      </Col>
-      <Col
-        md={6}
-        className={`my-auto d-none d-md-block p-2 ${styles.SignUpCol}`}
-      >
-        <Image
-          className={`${appStyles.FillerImage}`}
-          src={"https://codeinstitute.s3.amazonaws.com/AdvancedReact/hero2.jpg"}
-        />
       </Col>
     </Row>
   );
