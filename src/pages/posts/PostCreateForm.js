@@ -16,6 +16,31 @@ function PostCreateForm() {
 
   const [errors, setErrors] = useState({});
 
+  const [postData, setPostData] = useState({
+    title: "",
+    content: "",
+    image: "",
+  });
+
+  const { title, content, image } = postData;
+
+  const handleChange = (event) => {
+    setPostData({
+      ...postData,
+      [event.target.name]: event.target.value,
+    });
+  };
+
+  const handleChangeImage = (event) => {
+    if (event.target.files.length) {
+      URL.revokeObjectURL(image);
+      setPostData({
+        ...postData,
+        image: URL.createObjectURL(event.target.files[0]),
+      });
+    }
+  };
+
 
   const textFields = (
     <div className="text-center">
