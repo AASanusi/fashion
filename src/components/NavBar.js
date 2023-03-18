@@ -11,6 +11,7 @@ import Avatar from "./Avatar";
 import axios from "axios";
 import useClickOutsideToggle from "../hooks/useClickOutsideToggle";
 
+
 const NavBar = () => {
   const currentUser = useCurrentUser();
   const setCurrentUser = useSetCurrentUser();
@@ -26,32 +27,37 @@ const NavBar = () => {
     }
   };
 
-  const addPostIcon = (
-    <NavLink
-      className={styles.NavLink}
-      activeClassName={styles.Active}
-      to="/posts/create"
-    >
-      <i className="far fa-plus-square"></i>Add post
-    </NavLink>
-  );
+
+  
 
   const loggedInIcons = (
     <>
       <NavLink
-        className={styles.NavLink}
-        activeClassName={styles.Active}
-        to="/feed"
+      className={styles.NavLink}
+      activeClassName={styles.Active}
+      to="/posts/create"
       >
-        <i className="fas fa-stream"></i>Feed
+      <i className="far fa-plus-square"></i>Share a post
+      
       </NavLink>
+
+      <NavLink
+      className={styles.NavLink}
+      activeClassName={styles.Active}
+      to="/thoughts/create"
+      >
+      <i className="fa-sharp fa-regular fa-pen-to-square"></i>Share your thoughts
+
+    </NavLink>
+
       <NavLink
         className={styles.NavLink}
         activeClassName={styles.Active}
-        to="/liked"
+        to="/saved"
       >
-        <i className="fas fa-heart"></i>Liked
+        <i className="fa-solid fa-bookmark"></i>Saved posts
       </NavLink>
+
       <NavLink 
         className={styles.NavLink} 
         to="/" 
@@ -91,14 +97,15 @@ const NavBar = () => {
     <Navbar 
     expanded={expanded} 
     className={styles.NavBar} 
-    expand="md" fixed="top">
+    expand="md" fixed="top"
+    >
       <Container>
       <NavLink to="/">
           <Navbar.Brand>
             <img src={logo} alt="logo" height="45" />
           </Navbar.Brand>
         </NavLink>
-        {currentUser && addPostIcon}
+
         <Navbar.Toggle 
           ref={ref}
           onClick={() => setExpanded(!expanded)}
