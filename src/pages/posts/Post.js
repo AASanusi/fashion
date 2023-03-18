@@ -19,6 +19,8 @@ const Post = (props) => {
     content,
     image,
     updated_at,
+    save_id,
+    saves_count,
     postPage,
     setPosts,
   } = props;
@@ -50,6 +52,38 @@ const Post = (props) => {
         results: prevPosts.results.map((post) => {
           return post.id === id
             ? { ...post, likes_count: post.likes_count - 1, like_id: null }
+            : post;
+        }),
+      }));
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const handleSave = async () => {
+    try {
+      const { data } = await axiosRes.post("/saves/", { post: id });
+      setPosts((prevPosts) => ({
+        ...prevPosts,
+        results: prevPosts.results.map((post) => {
+          return post.id === id
+            ? { ...post, saves_count: post.saves_count + 1, save_id: data.id }
+            : post;
+        }),
+      }));
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const handleRemoveSave = async () => {
+    try {
+      await axiosRes.delete(`/saves/${save_id}/`);
+      setPosts((prevPosts) => ({
+        ...prevPosts,
+        results: prevPosts.results.map((post) => {
+          return post.id === id
+            ? { ...post, saves_count: post.saves_count - 1, save_id: null }
             : post;
         }),
       }));
@@ -103,14 +137,41 @@ const Post = (props) => {
             </OverlayTrigger>
           )}
           {likes_count}
+
           <Link to={`/posts/${id}`}>
             <i className="far fa-comments" />
           </Link>
           {comments_count}
+
+          {is_owner ? (
+            <OverlayTrigger
+              placement="top"
+              overlay={<Tooltip>No saving your own posts!</Tooltip>}
+            >
+              <i className="fa-regular fa-bookmark" />
+            </OverlayTrigger>
+          ) : currentUser ? (
+            <span onClick={handleSave}>
+              <i className={`fa-regular fa-bookmark ${styles.Bookmarkline}`} />
+            </span>
+          ) : save_id ? (
+            <span onClick={handleRemoveSave}>
+              <i className={`fa-solid fa-bookmark ${styles.Bookmark}`} />
+            </span>
+          ) : (
+            <OverlayTrigger
+              placement="top"
+              overlay={<Tooltip>To save post, log in!</Tooltip>}
+            >
+              <i className="fa-regular fa-bookmark" />
+            </OverlayTrigger>
+          )}
+          {saves_count}
         </div>
       </Card.Body>
     </Card>
   );
 };
+
 
 export default Post;
