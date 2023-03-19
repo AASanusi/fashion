@@ -150,13 +150,13 @@ const Post = (props) => {
             >
               <i className="fa-regular fa-bookmark" />
             </OverlayTrigger>
+          ) : save_id ? (
+              <span onClick={handleRemoveSave}>
+                <i className={`fa-solid fa-bookmark ${styles.Bookmark}`} />
+              </span>
           ) : currentUser ? (
             <span onClick={handleSave}>
               <i className={`fa-regular fa-bookmark ${styles.Bookmarkline}`} />
-            </span>
-          ) : save_id ? (
-            <span onClick={handleRemoveSave}>
-              <i className={`fa-solid fa-bookmark ${styles.Bookmark}`} />
             </span>
           ) : (
             <OverlayTrigger
