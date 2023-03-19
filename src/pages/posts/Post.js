@@ -118,12 +118,11 @@ const Post = (props) => {
           <div className="d-flex align-items-center">
             <span>{updated_at}</span>
             {is_owner && postPage && (
-              <MoreDropdown 
-              handleEdit={handleEdit} 
-              handleDelete={handleDelete} 
+              <MoreDropdown
+                handleEdit={handleEdit}
+                handleDelete={handleDelete}
               />
             )}
-            
           </div>
         </Media>
       </Card.Body>
