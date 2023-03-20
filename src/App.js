@@ -13,6 +13,7 @@ import PostEditForm from "./pages/posts/PostEditForm";
 import CreateThoughtsForm from "./pages/thoughts/CreateThoughtsForm";
 import ProfilePage from "./pages/profiles/ProfilePage";
 import ThoughtWall from "./pages/thoughts/ThoughtWall";
+import ThoughtsWall from "./pages/thoughts/ThoughtsWall";
 
 
 function App() {
@@ -49,6 +50,15 @@ function App() {
           <Route exact path="/posts/:id/edit" render={() => <PostEditForm />} />
           <Route exact path="/thoughts/create" render={() => <CreateThoughtsForm />} />
           <Route exact path="/thoughts/:id" render={() => <ThoughtWall />} />
+
+          <Route 
+            exact 
+            path="/thoughts" 
+            render={() => (
+              <ThoughtsWall message="No results found. Adjust the search keyword." />
+              )}
+          />
+          
           <Route exact path="/profiles/:id" render={() => <ProfilePage />} />
           <Route render={() => <p>Page not found!</p>} />
         </Switch>
