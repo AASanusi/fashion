@@ -42,13 +42,22 @@ const NavBar = () => {
       </NavLink>
 
       <NavLink
-      className={styles.NavLink}
-      activeClassName={styles.Active}
-      to="/thoughts/create"
-      >
-      <i className="fa-sharp fa-regular fa-pen-to-square"></i>Share your thoughts
+        className={styles.NavLink}
+        activeClassName={styles.Active}
+        to="/thoughts/create"
+        >
+        <i className="fa-sharp fa-regular fa-pen-to-square"></i>Share your thoughts
 
-    </NavLink>
+      </NavLink>
+
+      <NavLink
+        className={styles.NavLink}
+        activeClassName={styles.Active}
+        to="/thoughts"
+        >
+        <i className="fa-regular fa-comment"></i>Thoughts
+
+      </NavLink>
 
       <NavLink
         className={styles.NavLink}
