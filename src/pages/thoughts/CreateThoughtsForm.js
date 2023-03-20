@@ -17,7 +17,7 @@ import Alert from "react-bootstrap/Alert";
 function CreateThoughtsForm() {
     const [errors, setErrors] = useState({});
 
-    const [thoughtData, setThoughtData] = useState({
+    const [postData, setPostData] = useState({
         location: "",
         mood: "",
         content: "",
@@ -27,15 +27,15 @@ function CreateThoughtsForm() {
         location,
         mood,
         content
-    } = thoughtData;
+    } = postData;
 
 
     const history = useHistory();
 
 
     const handleChange = (event) => {
-        setThoughtData({
-            ...thoughtData,
+        setPostData({
+            ...postData,
             [event.target.name]: event.target.value,
         });
     };
@@ -50,7 +50,7 @@ function CreateThoughtsForm() {
         formData.append("content", content);
 
         try {
-            const { data } = await axiosReq.thought("/thoughts/", formData);
+            const { data } = await axiosReq.post("/thoughts/", formData);
             history.push(`/thoughts/${data.id}`);
         } catch (err) {
             console.log(err);
@@ -142,9 +142,6 @@ function CreateThoughtsForm() {
                                 Share
                             </Button>
                         </Row>
-
-
-
                     </Form>
                 </Container>
             </Col>
