@@ -15,6 +15,9 @@ import ProfilePage from "./pages/profiles/ProfilePage";
 import ThoughtWall from "./pages/thoughts/ThoughtWall";
 import ThoughtsWall from "./pages/thoughts/ThoughtsWall";
 import EditThoughtForm from "./pages/thoughts/EditThoughtForm";
+import UsernameForm from "./pages/profiles/UsernameForm";
+import UserPasswordForm from "./pages/profiles/UserPasswordForm";
+import ProfileEditForm from "./pages/profiles/ProfileEditForm";
 
 
 function App() {
@@ -60,8 +63,22 @@ function App() {
               <ThoughtsWall message="No results found. Adjust the search keyword." />
               )}
           />
-          
           <Route exact path="/profiles/:id" render={() => <ProfilePage />} />
+          <Route
+            exact
+            path="/profiles/:id/edit/username"
+            render={() => <UsernameForm />}
+          />
+          <Route
+            exact
+            path="/profiles/:id/edit/password"
+            render={() => <UserPasswordForm />}
+          />
+          <Route
+            exact
+            path="/profiles/:id/edit"
+            render={() => <ProfileEditForm />}
+          />
           <Route render={() => <p>Page not found!</p>} />
         </Switch>
       </Container>
