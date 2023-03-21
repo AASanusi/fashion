@@ -19,6 +19,7 @@ function ThoughtsWall({ message, filter = "" }) {
   const [thought, setThought] = useState({ results: [] });
   const [hasLoaded, setHasLoaded] = useState(false);
   const { pathname } = useLocation();
+
   const [query, setQuery] = useState("");
 
   useEffect(() => {
@@ -33,7 +34,13 @@ function ThoughtsWall({ message, filter = "" }) {
     };
 
     setHasLoaded(false);
-    fetchThoughts();
+    const timer = setTimeout(() => {
+      fetchThoughts();
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+    };
   }, [filter, query, pathname]);
 
   return (
@@ -48,9 +55,11 @@ function ThoughtsWall({ message, filter = "" }) {
           <Form.Control 
             value={query}
             onChange={(event) => setQuery(event.target.value)}
-            type="text" 
-            className="mr-sm-2" 
-            placeholder="Search thoughts"/>
+            type="text"
+            className="mr-sm-2"
+            placeholder="Search thoughts"
+            aria-label="search thoughts"
+          />
         </Form>
         {hasLoaded ? (
           <>

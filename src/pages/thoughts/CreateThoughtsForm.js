@@ -40,7 +40,7 @@ function CreateThoughtsForm() {
         });
     };
 
-    /* Post data to API */
+    /* Send data to API */
     const handleSubmit = async (event) => {
         event.preventDefault();
         const formData = new FormData();
