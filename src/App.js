@@ -14,6 +14,7 @@ import CreateThoughtsForm from "./pages/thoughts/CreateThoughtsForm";
 import ProfilePage from "./pages/profiles/ProfilePage";
 import ThoughtWall from "./pages/thoughts/ThoughtWall";
 import ThoughtsWall from "./pages/thoughts/ThoughtsWall";
+import EditThoughtForm from "./pages/thoughts/EditThoughtForm";
 
 
 function App() {
@@ -50,6 +51,7 @@ function App() {
           <Route exact path="/posts/:id/edit" render={() => <PostEditForm />} />
           <Route exact path="/thoughts/create" render={() => <CreateThoughtsForm />} />
           <Route exact path="/thoughts/:id" render={() => <ThoughtWall />} />
+          <Route exact path="/thoughts/:id/edit" render={() => <EditThoughtForm />} />
 
           <Route 
             exact 
