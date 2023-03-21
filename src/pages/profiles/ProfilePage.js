@@ -166,7 +166,7 @@ function ProfilePage() {
       ) : (
         <Asset
           src={NoResults}
-          message={`No results found, ${profile?.owner} has not thoughts yet.`}
+          message={`No results found, ${profile?.owner} has no thoughts yet.`}
         />
       )}
     </>

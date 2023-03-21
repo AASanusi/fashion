@@ -11,10 +11,12 @@ import btnStyles from "../../styles/Button.module.css";
 import { axiosReq } from "../../api/axiosDefaults";
 import { useHistory } from "react-router";
 import Alert from "react-bootstrap/Alert";
+import { useRedirect } from "../../hooks/useRedirect";
 
 /* Inputs field for users to share their thoughts */
 
 function CreateThoughtsForm() {
+    useRedirect("loggedOut")
     const [errors, setErrors] = useState({});
 
     const [postData, setPostData] = useState({
