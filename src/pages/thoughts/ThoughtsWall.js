@@ -18,7 +18,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
 
 function ThoughtsWall({ message, filter = "" }) {
-  const [thoughts, setThoughts] = useState({ results: [] });
+  const [thought, setThought] = useState({ results: [] });
   const [hasLoaded, setHasLoaded] = useState(false);
   const { pathname } = useLocation();
 
@@ -28,7 +28,7 @@ function ThoughtsWall({ message, filter = "" }) {
     const fetchThoughts = async () => {
       try {
         const { data } = await axiosReq.get(`/thoughts/?${filter}search=${query}`);
-        setThoughts(data);
+        setThought(data);
         setHasLoaded(true);
       } catch (err) {
         console.log(err);
@@ -52,7 +52,7 @@ function ThoughtsWall({ message, filter = "" }) {
         <i className={`fas fa-search ${styles.SearchIcon}`} />
         <Form 
         className={styles.SearchBar}
-        onSubmit={(event => event.preventDefault())}
+        onSubmit={(event) => event.preventDefault()}
         >
           <Form.Control 
             value={query}
@@ -65,15 +65,15 @@ function ThoughtsWall({ message, filter = "" }) {
         </Form>
         {hasLoaded ? (
           <>
-            {thoughts.results.length ? (
+            {thought.results.length ? (
                <InfiniteScroll
-               children={thoughts.results.map((thoughts) => (
-                <Thought key={thoughts.id} {...thoughts} setThoughts={setThoughts} />
+               children={thought.results.map((thought) => (
+                <Thought key={thought.id} {...thought} setThought={setThought} thoughtWall={true}/>
                ))}
-               dataLength={thoughts.results.length}
+               dataLength={thought.results.length}
                loader={<Asset spinner />}
-               hasMore={!!thoughts.next}
-               next={() => fetchMoreData(thoughts, setThoughts)}
+               hasMore={!!thought.next}
+               next={() => fetchMoreData(thought, setThought)}
              />
             ) : (
               <Container className={appStyles.Content}>
