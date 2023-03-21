@@ -14,3 +14,18 @@ export const fetchMoreData = async (resource, setResource) => {
     }));
   } catch (err) {}
 };
+
+export const followHelper = (profile, clickedProfile, following_id) => {
+  return profile.id === clickedProfile.id
+    ? // Profile clicked on and updates count
+      {
+        ...profile,
+        followers_count: profile.followers_count + 1,
+        following_id,
+      }
+    : profile.is_owner
+    ? // Following count of logged in user
+      { ...profile, following_count: profile.following_count + 1 }
+    : // Unchanged for profiles not owned by user
+      profile;
+};
