@@ -14,9 +14,11 @@ import { useLocation } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
 
 import NoResults from "../../assets/no-results.png";
+import InfiniteScroll from "react-infinite-scroll-component";
+import { fetchMoreData } from "../../utils/utils";
 
 function ThoughtsWall({ message, filter = "" }) {
-  const [thought, setThought] = useState({ results: [] });
+  const [thoughts, setThoughts] = useState({ results: [] });
   const [hasLoaded, setHasLoaded] = useState(false);
   const { pathname } = useLocation();
 
@@ -26,7 +28,7 @@ function ThoughtsWall({ message, filter = "" }) {
     const fetchThoughts = async () => {
       try {
         const { data } = await axiosReq.get(`/thoughts/?${filter}search=${query}`);
-        setThought(data);
+        setThoughts(data);
         setHasLoaded(true);
       } catch (err) {
         console.log(err);
@@ -63,10 +65,16 @@ function ThoughtsWall({ message, filter = "" }) {
         </Form>
         {hasLoaded ? (
           <>
-            {thought.results.length ? (
-              thought.results.map((thought) => (
-                <Thought key={thought.id} {...thought} setThought={setThought} />
-              ))
+            {thoughts.results.length ? (
+               <InfiniteScroll
+               children={thoughts.results.map((thoughts) => (
+                <Thought key={thoughts.id} {...thoughts} setThoughts={setThoughts} />
+               ))}
+               dataLength={thoughts.results.length}
+               loader={<Asset spinner />}
+               hasMore={!!thoughts.next}
+               next={() => fetchMoreData(thoughts, setThoughts)}
+             />
             ) : (
               <Container className={appStyles.Content}>
                 <Asset src={NoResults} message={message} />
