@@ -8,7 +8,7 @@ import SignInForm from "./pages/auth/SignInForm";
 import PostCreateForm from "./pages/posts/PostCreateForm";
 import PostPage from "./pages/posts/PostPage";
 import PostsPage from "./pages/posts/PostsPage";
-import { useSetCurrentUser } from "./contexts/CurrentUserContext";
+import { useCurrentUser } from "./contexts/CurrentUserContext";
 import PostEditForm from "./pages/posts/PostEditForm";
 import CreateThoughtsForm from "./pages/thoughts/CreateThoughtsForm";
 import ProfilePage from "./pages/profiles/ProfilePage";
@@ -21,7 +21,7 @@ import ProfileEditForm from "./pages/profiles/ProfileEditForm";
 
 
 function App() {
-  const currentUser = useSetCurrentUser();
+  const currentUser = useCurrentUser();
   const profile_id = currentUser?.profile_id || "";
 
   return (
