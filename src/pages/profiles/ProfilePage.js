@@ -24,9 +24,12 @@ import Post from "../posts/Post";
 import { fetchMoreData } from "../../utils/utils";
 import NoResults from "../../assets/no-results.png";
 
+
+
 function ProfilePage() {
   const [hasLoaded, setHasLoaded] = useState(false);
   const [profilePosts, setProfilePosts] = useState({ results: [] });
+  const [profileThoughts, setProfileThoughts] = useState({ results: [] });
 
   const currentUser = useCurrentUser();
   const { id } = useParams();
@@ -40,16 +43,22 @@ function ProfilePage() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const [{ data: pageProfile }, { data: profilePosts }] =
+        const [
+          { data: pageProfile }, 
+          { data: profilePosts },
+          { data: profileThoughts }
+        ] =
           await Promise.all([
             axiosReq.get(`/profiles/${id}/`),
             axiosReq.get(`/posts/?owner__profile=${id}`),
+            axiosReq.get(`/thoughts/?owner__profile=${id}`),
           ]);
         setProfileData((prevState) => ({
           ...prevState,
           pageProfile: { results: [pageProfile] },
         }));
         setProfilePosts(profilePosts);
+        setProfileThoughts(profileThoughts);
         setHasLoaded(true);
       } catch (err) {
         console.log(err);
@@ -74,6 +83,10 @@ function ProfilePage() {
             <Col xs={3} className="my-2">
               <div>{profile?.posts_count}</div>
               <div>posts</div>
+            </Col>
+            <Col xs={3} className="my-2">
+              <div>{profile?.thoughts_count}</div>
+              <div>thoughts</div>
             </Col>
             <Col xs={3} className="my-2">
               <div>{profile?.followers_count}</div>
@@ -132,16 +145,40 @@ function ProfilePage() {
       )}
     </>
   );
+  const mainProfileThoughts = (
+    <>
+      <hr />
+      <p className="text-center">{profile?.owner}'s Thoughts</p>
+      <hr />
+      {profileThoughts.results.length ? (
+        <InfiniteScroll
+          children={profileThoughts.results.map((thought) => (
+            <Post key={thought.id} {...thought} setThoughts={setProfileThoughts} />
+          ))}
+          dataLength={profileThoughts.results.length}
+          loader={<Asset spinner />}
+          hasMore={!!profileThoughts.next}
+          next={() => fetchMoreData(profileThoughts, setProfileThoughts)}
+        />
+      ) : (
+        <Asset
+          src={NoResults}
+          message={`No results found, ${profile?.owner} has not thoughts yet.`}
+        />
+      )}
+    </>
+  );
 
   return (
     <Row>
-      <Col className="py-2 p-0 p-lg-2" lg={8}>
+      <Col className="py-2 p-0 p-lg-2" lg={12}>
         <PopularProfiles mobile />
         <Container className={appStyles.Content}>
           {hasLoaded ? (
             <>
               {mainProfile}
               {mainProfilePosts}
+              {mainProfileThoughts}
             </>
           ) : (
             <Asset spinner />
