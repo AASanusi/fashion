@@ -18,14 +18,14 @@ function CreateThoughtsForm() {
     const [errors, setErrors] = useState({});
 
     const [postData, setPostData] = useState({
-        location: "",
-        mood: "",
+        current_location: "",
+        mood_selector: "",
         content: "",
     });
 
     const {
-        location,
-        mood,
+        current_location,
+        mood_selector,
         content
     } = postData;
 
@@ -45,8 +45,8 @@ function CreateThoughtsForm() {
         event.preventDefault();
         const formData = new FormData();
 
-        formData.append("location", location);
-        formData.append("mood", mood);
+        formData.append("current_location", current_location);
+        formData.append("mood_selector", mood_selector);
         formData.append("content", content);
 
         try {
@@ -74,10 +74,10 @@ function CreateThoughtsForm() {
                             <Form.Label>Location</Form.Label>
                             <Form.Control
                                 type="text"
-                                name="location"
-                                value={location}
+                                name="current_location"
+                                value={current_location}
                                 onChange={handleChange}
-                                aria-label="Location"
+                                aria-label="current_location"
                             />
                         </Form.Group>
                         {errors?.location?.map((message, idx) => (
@@ -105,8 +105,8 @@ function CreateThoughtsForm() {
                             <Form.Label>Mood</Form.Label>
                             <Form.Control
                                 as="select"
-                                defaultValue="Normal"
-                                name="mood"
+                                defaultValue="Select.."
+                                name="mood_selector"
                                 onChange={handleChange}
                                 aria-label="Mood"
                             >
