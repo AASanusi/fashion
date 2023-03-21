@@ -23,6 +23,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import Post from "../posts/Post";
 import { fetchMoreData } from "../../utils/utils";
 import NoResults from "../../assets/no-results.png";
+import Thought from "../thoughts/Thought";
 
 
 
@@ -34,7 +35,7 @@ function ProfilePage() {
   const currentUser = useCurrentUser();
   const { id } = useParams();
 
-  const {setProfileData, handleFollow} = useSetProfileData();
+  const {setProfileData, handleFollow, handleUnfollow} = useSetProfileData();
   const { pageProfile } = useProfileData();
 
   const [profile] = pageProfile.results;
@@ -104,7 +105,7 @@ function ProfilePage() {
             (profile?.following_id ? (
               <Button
                 className={`${btnStyles.Button} ${btnStyles.BlackOutline}`}
-                onClick={() => {}}
+                onClick={() => handleUnfollow(profile)}
               >
                 unfollow
               </Button>
@@ -153,7 +154,7 @@ function ProfilePage() {
       {profileThoughts.results.length ? (
         <InfiniteScroll
           children={profileThoughts.results.map((thought) => (
-            <Post key={thought.id} {...thought} setThoughts={setProfileThoughts} />
+            <Thought key={thought.id} {...thought} setThoughts={setProfileThoughts} />
           ))}
           dataLength={profileThoughts.results.length}
           loader={<Asset spinner />}
