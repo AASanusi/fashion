@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar, Container, Nav } from "react-bootstrap";
+import { Navbar, Container, Nav,} from "react-bootstrap";
 import logo from "../assets/logo.png";
 import styles from "../styles/NavBar.module.css";
 import { NavLink } from "react-router-dom";
@@ -33,11 +33,11 @@ const NavBar = () => {
   const loggedInIcons = (
     <>
       <NavLink
-      className={styles.NavLink}
-      activeClassName={styles.Active}
-      to="/posts/create"
+        className={styles.NavLink}
+        activeClassName={styles.Active}
+        to="/posts/create"
       >
-      <i className="far fa-plus-square"></i>Add a post
+        <i className="far fa-plus-square"></i>Add a post
       
       </NavLink>
 
@@ -45,8 +45,9 @@ const NavBar = () => {
         className={styles.NavLink}
         activeClassName={styles.Active}
         to="/thoughts/create"
-        >
+      >
         <i className="fa-sharp fa-regular fa-pen-to-square"></i>Share your thoughts
+          
 
       </NavLink>
 
@@ -54,8 +55,9 @@ const NavBar = () => {
         className={styles.NavLink}
         activeClassName={styles.Active}
         to="/thoughts"
-        >
+      >
         <i className="fa-regular fa-comment"></i>Thoughts
+
 
       </NavLink>
 
@@ -64,15 +66,19 @@ const NavBar = () => {
         activeClassName={styles.Active}
         to="/saved"
       >
+
         <i className="fa-solid fa-bookmark"></i>Saved posts
+
       </NavLink>
 
       <NavLink 
         className={styles.NavLink} 
         to="/" 
-        onClick={handleSignOut}>
-
+        onClick={handleSignOut}
+      >
         <i className="fas fa-sign-out-alt"></i>Sign out
+
+
       </NavLink>
       <NavLink
         className={styles.NavLink}
@@ -90,7 +96,9 @@ const NavBar = () => {
         activeClassName={styles.Active}
         to="/signin"
       >
-        <i className="fas fa-sign-in-alt"></i>Sign in
+          <i className="fas fa-sign-in-alt"></i>Sign in
+
+  
       </NavLink>
       <NavLink
         to="/signup"
@@ -98,6 +106,7 @@ const NavBar = () => {
         activeClassName={styles.Active}
       >
         <i className="fas fa-user-plus"></i>Sign up
+
       </NavLink>
     </>
   );
