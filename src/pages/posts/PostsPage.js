@@ -31,16 +31,14 @@ function PostsPage({ message, filter = "" }) {
             const { data } = await axiosReq.get(`/posts/?${filter}search=${query}`);
             setPosts(data);
             setHasLoaded(true);
-            console.log('fetch works')
           } catch (err) {
-            console.log(err);
+            // console.log(err);
           }
         };
 
         setHasLoaded(false);
         const timer = setTimeout(() => {
           fetchPosts();
-          console.log('in timer')
         }, 1000);
         return () => {
           clearTimeout(timer);

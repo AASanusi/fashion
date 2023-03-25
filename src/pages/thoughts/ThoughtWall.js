@@ -20,9 +20,8 @@ function ThoughtWall() {
           axiosReq.get(`/thoughts/${id}`),
         ]);
         setThought({ results: [thought] });
-        console.log(thought);
       } catch (err) {
-        console.log(err);
+        // console.log(err);
       }
     };
 

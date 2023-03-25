@@ -32,7 +32,7 @@ function ThoughtsWall({ message, filter = "" }) {
         setThought(data);
         setHasLoaded(true);
       } catch (err) {
-        console.log(err);
+        // console.log(err);
       }
     };
 

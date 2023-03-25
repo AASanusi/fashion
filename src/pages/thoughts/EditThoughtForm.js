@@ -42,7 +42,7 @@ function EditThoughtForm() {
     
             is_owner ? setPostData({ current_location, mood_selector, content }) : history.push("/");
           } catch (err) {
-            console.log(err);
+            // console.log(err);
           }
         };
     
@@ -70,7 +70,7 @@ function EditThoughtForm() {
             await axiosReq.put(`/thoughts/${id}/`, formData);
             history.push(`/thoughts/${id}`);
         } catch (err) {
-            console.log(err);
+            // console.log(err);
             if (err.response?.status !== 401) {
                 setErrors(err.response?.data);
             }
