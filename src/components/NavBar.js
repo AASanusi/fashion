@@ -28,8 +28,6 @@ const NavBar = () => {
   };
 
 
-  
-
   const loggedInIcons = (
     <>
       <NavLink
@@ -59,6 +57,7 @@ const NavBar = () => {
       </NavLink>
 
       <NavLink
+        exact
         className={styles.NavLink}
         activeClassName={styles.Active}
         to="/thoughts"
