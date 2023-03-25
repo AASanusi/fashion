@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar, Container, Nav,} from "react-bootstrap";
+import { Navbar, Container, Nav, OverlayTrigger, Tooltip,} from "react-bootstrap";
 import logo from "../assets/logo.png";
 import styles from "../styles/NavBar.module.css";
 import { NavLink } from "react-router-dom";
@@ -37,8 +37,12 @@ const NavBar = () => {
         activeClassName={styles.Active}
         to="/posts/create"
       >
-        <i className="far fa-plus-square"></i>Add a post
-      
+        <OverlayTrigger
+          placement="bottom"
+          overlay={<Tooltip>Add a Post</Tooltip>}
+        >
+          <i className="far fa-plus-square"></i>
+        </OverlayTrigger>
       </NavLink>
 
       <NavLink
@@ -46,9 +50,12 @@ const NavBar = () => {
         activeClassName={styles.Active}
         to="/thoughts/create"
       >
-        <i className="fa-sharp fa-regular fa-pen-to-square"></i>Share your thoughts
-          
-
+        <OverlayTrigger
+          placement="bottom"
+          overlay={<Tooltip>Share your thoughts</Tooltip>}
+        >
+           <i className="fa-sharp fa-regular fa-pen-to-square"></i>
+        </OverlayTrigger>
       </NavLink>
 
       <NavLink
@@ -56,9 +63,12 @@ const NavBar = () => {
         activeClassName={styles.Active}
         to="/thoughts"
       >
-        <i className="fa-regular fa-comment"></i>Thoughts
-
-
+        <OverlayTrigger
+          placement="bottom"
+          overlay={<Tooltip>Thoughts</Tooltip>}
+        >
+          <i className="fa-regular fa-comment"></i>         
+        </OverlayTrigger>
       </NavLink>
 
       <NavLink
@@ -66,9 +76,12 @@ const NavBar = () => {
         activeClassName={styles.Active}
         to="/saved"
       >
-
-        <i className="fa-solid fa-bookmark"></i>Saved posts
-
+        <OverlayTrigger
+          placement="bottom"
+          overlay={<Tooltip>Saved posts</Tooltip>}
+        >
+          <i className="fa-solid fa-bookmark"></i>
+        </OverlayTrigger>
       </NavLink>
 
       <NavLink 
@@ -76,15 +89,22 @@ const NavBar = () => {
         to="/" 
         onClick={handleSignOut}
       >
-        <i className="fas fa-sign-out-alt"></i>Sign out
-
-
+        <OverlayTrigger
+          placement="bottom"
+          overlay={<Tooltip>Sign out</Tooltip>}
+        >
+          <i className="fas fa-sign-out-alt"></i>          
+        </OverlayTrigger>
       </NavLink>
+
       <NavLink
         className={styles.NavLink}
         to={`/profiles/${currentUser?.profile_id}`}
       >
-       <Avatar src={currentUser?.profile_image} text="Profile" height={40} />
+       <Avatar 
+        src={currentUser?.profile_image} 
+        text={currentUser?.username} 
+        height={40} />
       </NavLink>
     </>
   );
@@ -96,17 +116,25 @@ const NavBar = () => {
         activeClassName={styles.Active}
         to="/signin"
       >
-          <i className="fas fa-sign-in-alt"></i>Sign in
-
-  
+        <OverlayTrigger
+          placement="bottom"
+          overlay={<Tooltip>Sign in</Tooltip>}
+        >
+          <i className="fas fa-sign-in-alt"></i>         
+        </OverlayTrigger> 
       </NavLink>
+
       <NavLink
         to="/signup"
         className={styles.NavLink}
         activeClassName={styles.Active}
       >
-        <i className="fas fa-user-plus"></i>Sign up
-
+        <OverlayTrigger
+          placement="bottom"
+          overlay={<Tooltip>Sign up</Tooltip>}
+        >
+          <i className="fas fa-user-plus"></i>          
+        </OverlayTrigger>
       </NavLink>
     </>
   );
@@ -136,7 +164,12 @@ const NavBar = () => {
               activeClassName={styles.Active}
               to="/"
             >
-              <i className="fa-solid fa-house-chimney"></i>Home
+              <OverlayTrigger
+                placement="bottom"
+                overlay={<Tooltip>Home</Tooltip>}
+              >
+                <i className="fa-solid fa-house-chimney"></i>        
+        </OverlayTrigger>
             </NavLink>
             {currentUser ? loggedInIcons : loggedOutIcons}
           </Nav>
