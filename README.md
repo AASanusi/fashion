@@ -26,6 +26,7 @@ A DRF_API was created to support all backend functionalities needed for this app
    - [Typography](#Typography)
    - [Wireframes](#Wireframes)
    - [Entity Relationship Diagram](#Entity-Relationship-Diagram)
+   - [Colour Palette](#Colour-Palette)
 
 
 - [Features](#Features)
@@ -176,8 +177,166 @@ Google Fonts was used for all the fonts on this application.
 #### Profile Wireframe:
 ![]()
 
-### Database Entity Relationship Diagram
+### Database Entity Relationship Diagram:
 ![Database ERD](/src/assets/readme-images/database-erd.png)
+
+### Colour Palette:
+![Colour Palette](/src/assets/readme-images/colour-palette.png)
+
+## Features
+### Existing Features
+#### Home page
+
+#### Navigation bar
+
+#### Post Page
+
+#### Thought Wall
+
+#### Saved Page
+
+#### Sign in page
+
+#### Sign up page
+
+#### Profile page
+
+#### Infinite scroll
+
+### C.R.U.D:
+#### Create Thought
+#### Read Thought
+#### Update Thought
+#### Delete Thought
+
+#### Create Save
+#### Read Thought
+#### Delete Save
+
+#### Create Post
+#### Read Post
+#### Update Post
+#### Delete Post
+
+#### Create Comment
+#### Read Comment
+#### Update Comment
+#### Delete Comment
+
+#### Create Likes
+#### Delete Likes
+
+### Features Left to Implement
+
+## Technologies Used
+### Languages Used
+- [HTML5](https://en.wikipedia.org/wiki/HTML)
+- [CSS](https://en.wikipedia.org/wiki/CSS)
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+- [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+- [Django](https://www.djangoproject.com/)
+
+### Frameworks, Libraries And Programs Used 
+1. #### [Font Awesome](https://fontawesome.com/)
+   - Font awesome icons were used to create the NavBar pages links.
+
+2. #### [Google Fonts](https://balsamiq.com/)
+   - Used for all texts created on this application.
+
+3. #### [Balsamiq](https://balsamiq.com/)
+   - Balsamiq was used to create the basic frameworks of the project to which helped to coding the website.
+
+4. #### [Lucid Chart](https://lucid.app/)
+   - Used to create Database ERD.
+
+5. #### [Git:](https://git-scm.com/)
+   - Git was used in the Gitpod terminal to add, commit and push code to Github.
+
+6. #### [Gitpod:](https://www.gitpod.io/)
+   - Gitpod is the Integrated Developer Environment used to code this project.
+
+7. #### [Github:](https://github.com/)
+   - Github was used to hold and keep the pushed codes by Git and store projects.
+
+8. #### [Gitpod Python Essentials Template:](https://github.com/Code-Institute-Org/python-essentials-template)
+   - Gitpod Python Essentials Template was provided by code institute and it consisted of all the relevant tools needed for the successful running of the application.
+
+9. #### [Heroku](https://id.heroku.com/login)
+   - Heroku was used to deploy the project.
+
+10. #### [PostgreSQL](https://www.postgresql.org/)
+   - This was used for database.
+
+11. #### [ElephantSQL](https://www.elephantsql.com/)
+   - This was used as the new database.
+
+12. #### [Google Fonts](https://fonts.google.com/about)
+   - This was used to form the fonts for the page.
+
+13. #### [Favicon](https://www.favicon.cc/)
+   - This was used to create an icon for the site tab.
+
+14. #### [ReactJS](https://react.dev/)
+    - This was used to create the components required to build a fully front-end application
+
+15. #### [React-Bootstrap](https://react-bootstrap.github.io/)
+    - Used to style the layout and design of the application.
+
+## Testing
+
+### Manual Testing
+
+### Automated Testing
+
+### Validator Testing
+
+### Unfixed Bugs
+- All bugs were fixed before submitting this project.
+
+## Deployment
+### Step 1:
+#### Prepare and Install frameworks/packages
+- After creating Github repository and launching Gitpod workspace, install ReactJS
+```
+npx create-react-app . --use-npm
+```
+- Load up the application in the browser
+```
+npm start
+```
+- 
+### Step 2:
+#### Coonecting API & React
+
+### Step 3:
+#### Deployment
+
+## Credits
+### Content
+- The [Code Institue](https://codeinstitute.net/) walkthrough video was used to help form the basic parts of the projects.
+- [Code Institue](https://codeinstitute.net/) walkthrough video was used to install all the packages and libraries required for the project.
+- [Stack Overflow](https://stackoverflow.com/questions/43527045/react-bootstrap-tooltip-throws-error-react-children-only-expected-to-receive-a) aided with sorting out the overlay trigger function.
+- [AZMIND](https://azmind.com/bootstrap-align-center/) helped to align my forms correctly.
+- [DigitalOcean](https://www.digitalocean.com/community/tutorials/build-a-to-do-application-using-django-and-react) aided with providing more clarification of the relationship between API and React.
+### Media
+- All images taken from google.
+### Acknowledgments
+- #### Tutor Support Team
+- Thanks to Joshua for helping me sort out the structure issues for my posts and thoughts on the profile page.
+- Thanks to Sean for providing some help with the overlay trigger functionality for the NavBar icons.
+- Thanks to Oisin for aiding me with fixing all posts to be for specific to owner's profile.
+- Thanks to Ed for helping me sort the statistics for my thoughts count and sorting it out on my API.
+- Thanks to Gemma for providing help with my thought form when it's updated.
+- #### Fellow classmates/aluminis on Slack
+- Thanks to Tony for proviing me with help with the requirement.txt file which caused deployment issues.
+- Thanks to Lauren-Nicole for helping me to optimise my thoughts form.
+- Thanks Tom for providing help with the MoreDroDown function.
+- #### Mentor
+- Thanks to my Mentor for providing with resources to help to form my project.
+- Thanks to my Mentor for sharing knowledge and experience about the industry to help me with building.
+- Thanks to my mentor for providing constructive critiscm on my project to help me improve it.
+
+
 
 
 
