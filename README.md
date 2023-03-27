@@ -31,22 +31,18 @@ A DRF_API was created to support all backend functionalities needed for this app
 
 - [Features](#Features)
    - [Existing Features](#Existing-Features)
-      - [Home page](#Home page)
-      - [Navigation bar](#Navigation bar)
-      - [Thought Wall](#Thought Wall)
-      - [Saved Page](#Saved Page)
+      - [Home page](#Home-page)
+      - [Navigation bar](#Navigation-bar)
+      - [Thought Wall](#Thought-Wall)
+      - [Saved Page](#Saved-Page)
       - [Sign in page](#Sign-in-page)
       - [Sign up page](#Sign-up-page)
       - [Profile page](#Profile-page) 
    - [C.R.U.D](#CRUD)
-      - [Create Comment](#Create-Comment)
-      - [Read Comment](#Read-Comment)
-      - [Edit Comment Page](#Edit-Comment-Page)
-      - [Delete Comment Page](#Delete-Comment-Page)
-      - [Admin Page](#Admin-Page)
-      - [Register Page](#Register-Page)
-      - [Login Page](#Login-Page)
-      - [Logout Page](#Logout-Page)
+      - [Create thought](#Create-Comment)
+      - [Read thought](#Read-Comment)
+      - [Edit thought](#Edit-Comment-Page)
+      - [Delete thought](#Delete-Comment-Page)
    - [Features Left to Implement](#Features-Left-to-Implement)
 
 - [Technologies Used](#Technologies-Used)
@@ -227,28 +223,24 @@ Google Fonts was used for all the fonts on this application.
 ### C.R.U.D:
 Few examples of the CRUD functionality:
 #### Create Thought
+- Registered users are capable of creating and sharing a thought
+![Create Thought image](src/assets/readme-images/create-thought.png)
 #### Read Thought
+- Once thought has been shared, users can then view and read it.
+![Read Thought image](src/assets/readme-images/read-thought.png)
 #### Update Thought
+- Users are then capable of updating and editing the best to suit them.
+   - The content characters are limited to a certian number. 
+![Update Thought image](src/assets/readme-images/update-thought.png)
 #### Delete Thought
-
-#### Create Save
-#### Read Save
-#### Delete Save
-
-#### Create Post
-#### Read Post
-#### Update Post
-#### Delete Post
-
-#### Create Comment
-#### Read Comment
-#### Update Comment
-#### Delete Comment
-
-#### Create Likes
-#### Delete Likes
+- Users can then delete the thought if they no longer what it on the wall.
+![Delete Thought image](src/assets/readme-images/delete-thought.png)
 
 ### Features Left to Implement
+- To implement notifications so that users can see when other posts.
+- To implement direct messaging for users to communicate.
+- Increase the word count for posting thoughts.
+- For users to be able to repost other users posts or thoughts.
 
 ## Technologies Used
 ### Languages Used
