@@ -8,6 +8,7 @@ import Row from "react-bootstrap/Row";
 import { useParams } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
 import Thought from "./Thought";
+import PopularProfiles from "../profiles/PopularProfiles";
 
 function ThoughtWall() {
   const { id } = useParams();
@@ -31,11 +32,11 @@ function ThoughtWall() {
   return (
     <Row className="h-100">
       <Col className="py-2 p-0 p-lg-2" lg={8}>
-        <p>Popular profiles for mobile</p>
+        <PopularProfiles mobile />
         <Thought {...thought.results[0]} setThoughts={setThought} thoughtWall={true}/>
       </Col>
       <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
-        Popular profiles for desktop
+        <PopularProfiles />
       </Col>
     </Row>
   );
