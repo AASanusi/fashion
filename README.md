@@ -31,11 +31,13 @@ A DRF_API was created to support all backend functionalities needed for this app
 
 - [Features](#Features)
    - [Existing Features](#Existing-Features)
-      - [Home](#Home)
-      - [Navigation](#Navigation)
-      - [Post Detail](#Post-Detail)
-      - [Category](#Category)
-      - [Footer Links](#Footer-Links)
+      - [Home page](#Home page)
+      - [Navigation bar](#Navigation bar)
+      - [Thought Wall](#Thought Wall)
+      - [Saved Page](#Saved Page)
+      - [Sign in page](#Sign-in-page)
+      - [Sign up page](#Sign-up-page)
+      - [Profile page](#Profile-page) 
    - [C.R.U.D](#CRUD)
       - [Create Comment](#Create-Comment)
       - [Read Comment](#Read-Comment)
@@ -186,31 +188,51 @@ Google Fonts was used for all the fonts on this application.
 ## Features
 ### Existing Features
 #### Home page
-
+- The home page showcases what the application is about and what you can do and view.
+- Both Unregisted and registered users can view the home.
+- Only regsitered users can save, like and comment.
+- ##### Home Page desktop
+![Home Page desktop image](src/assets/readme-images/home-page.png)
+- ##### Home Page mobile
+![Home Page mobile image](src/assets/readme-images/home-page-mobile.png)
 #### Navigation bar
-
-#### Post Page
-
+- The navigation bar consists of all the icons with links to all the pages.
+- What users can view changes depending if they are signed in or not (see below images)
+- ##### Navigation bar when user sign in
+![Sign in Navigation bar image](src/assets/readme-images/sign-in-nav.png)
+- ##### Navigation bar when user sign out
+![Sign out Navigation bar image](src/assets/readme-images/sign-out-nav.png)
 #### Thought Wall
-
+- A thought wall is a page that consists of all users thoughts.
+- This is for registered users to share their burning thoughts and have it on a wall for everyone to see.
+- On the wall they can let us know their random locations, what they are thinking and what mood they are in.
+![Thought Wall image](src/assets/readme-images/thought-wall.png)
 #### Saved Page
-
+- This page consists of all the posts the user likes and would wanna see again.
+- Only registered users can save and view this page.
+![Saved Page image](src/assets/readme-images/saved-page.png)
 #### Sign in page
-
+- Any user can sign into this page once registered.
+![Sign in page image](src/assets/readme-images/sign-in-page.png)
 #### Sign up page
-
+- An easy sign up form to have users registered to the application.
+![Sign up page image](src/assets/readme-images/sign-up-page.png)
 #### Profile page
+- The profile page consists of the user avatar and name.
+- It has the users statistics for people to see such as posts, thoughts, following and followers.
+- It also has the posts and the thoughts the users have posted and shared.
+![Profile page image](src/assets/readme-images/profile-page.png)
 
-#### Infinite scroll
 
 ### C.R.U.D:
+Few examples of the CRUD functionality:
 #### Create Thought
 #### Read Thought
 #### Update Thought
 #### Delete Thought
 
 #### Create Save
-#### Read Thought
+#### Read Save
 #### Delete Save
 
 #### Create Post
