@@ -296,7 +296,7 @@ Google Fonts was used for all the fonts on this application.
 ## Deployment
 ### Step 1:
 #### Prepare and Install frameworks/packages
-- After creating Github repository and launching Gitpod workspace, install ReactJS
+- Create Github repository and launch Gitpod workspace, install ReactJS
 ```
 npx create-react-app . --use-npm
 ```
@@ -304,12 +304,59 @@ npx create-react-app . --use-npm
 ```
 npm start
 ```
-- 
+- Install packages below via npm install:
+```
+react-bootstrap@1.6.3 bootstrap@4.6.0
+react-router-dom@5.3.0
+axios
+react-infinite-scroll-component
+msw --save-dev
+jwt-decode
+```
+- Git add, commit and push all the changes to Github.
+- Log in or Sign up to [Heroku](https://www.heroku.com/).
+- On dashboard, click "Create New App" or click the "New" dropdown menu on the top right of the page to access "Create New App"
+- On the "Create New App" page, name your app (needs to be a unique name), choose a region and click the "Create App" button.
+- Scroll back up and locate the "Deploy" tab and select to access the page.
+- Once on the "Deploy" page, find "Deployment method" section, select "Github" and click the "Connect to Github" button.
+- On "Connect to Github" section, search for your Github repository name you want to deploy by using the empty input field provided and click "Search" to search for the repository name.
+- After clicking "Search", repository name should appear and then click "Connect" button beside it. Now everytime you push to Github, you will be able to deploy on Heroku.
+- Scroll down, to "Automatic deploys" and "Manual deploy" section. You can deploy via these two options.
+- You can set up "Automatic deploys" by clicking on "Enable Automatic Deploys"
+- To deploy manually, click the "Deploy Branch" button.
+- Finally, you'll see "Your app was successfully deployed" pop up message with a "View" button to access the deployed application.
+
+
 ### Step 2:
-#### Coonecting API & React
+#### Connecting API & React
+- To connect API to React, on the DRF-API under the setting tab reveal config Vars and add the following:
+```
+Key: CLIENT_ORIGIN | Value: https://react-app-name.herokuapp.com
+Key: CLIENT_ORIGIN_DEV | Value: https://gitpod-browser-link.ws-eu92.gitpod.io
+```
+- Install the Axios package and create file "axiosDefaults.js"
 
 ### Step 3:
-#### Deployment
+####  Deployment to Heroku
+- Make sure the below is in your package,json and if not, add the below to the scripts section:
+```
+"heroku-prebuild": "npm install -g serve",
+```
+- Create a Profile on the level of the repository and insert the below in it:
+```
+web: serve -s build
+```
+- Once again, git add, commit and push all the changes to Github.
+- Log in or Sign up to [Heroku](https://www.heroku.com/).
+- Scroll back up and locate the "Deploy" tab and select to access the page.
+- Once on the "Deploy" page, find "Deployment method" section, select "Github" and click the "Connect to Github" button.
+- On "Connect to Github" section, search for your Github repository name you want to deploy by using the empty input field provided and click "Search" to search for the repository name.
+- After clicking "Search", repository name should appear and then click "Connect" button beside it. Now everytime you push to Github, you will be able to deploy on Heroku.
+- Scroll down, to "Automatic deploys" and "Manual deploy" section. You can deploy via these two options.
+- You can set up "Automatic deploys" by clicking on "Enable Automatic Deploys"
+- To deploy manually, click the "Deploy Branch" button.
+- Finally, you'll see "Your app was successfully deployed" pop up message with a "View" button to access the deployed application.
+
 
 ## Credits
 ### Content
