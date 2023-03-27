@@ -63,13 +63,10 @@ A DRF_API was created to support all backend functionalities needed for this app
 
 - [Testing](#Testing)
    - [Manual Testing](#Manual-Testing)
-   - [Automated Testing](#Automated-Testing)
    - [Validator Testing](#Validator-Testing)
-      - [HTML Validator](#HTML-Validator) 
-      - [CSS Validator](#CSS-Validator) 
-      - [Lighthouse Validator](#Lighthouse-Validator) 
-      - [CI Python Linter](#CI-Python-Linter)
-   - [Bugs Encountered And Solutions](#Bugs-Encountered-And-Solutions)   
+      - [CSS Validator](#CSS-Validator)
+      - [ESlint Testing](#ESlint-Testing)
+      - [Lighthouse Validator](#Lighthouse-Validator)  
    - [Unfixed Bugs](#Unfixed-Bugs)
 
 - [Deployment](#Deployment)
@@ -241,6 +238,7 @@ Few examples of the CRUD functionality:
 - To implement direct messaging for users to communicate.
 - Increase the word count for posting thoughts.
 - For users to be able to repost other users posts or thoughts.
+- To create a function that syncs the users location when providing their location on fot thoughts rather than having to write it.
 
 ## Technologies Used
 ### Languages Used
@@ -299,10 +297,39 @@ Few examples of the CRUD functionality:
 ## Testing
 
 ### Manual Testing
-
-### Automated Testing
+- This application has been manually tested using the C.R.U.D functionality for:
+   - Thoughts:
+      - As seen above in the CRUD example, user can create, read, update and delete thoughts.
+   - Saves:
+      - Users can save and unsave posts.
+   - Posts:
+      - Users can create, read, update and delete posts.
+   - Comments:
+      - Users can create, read, update and delete comments.
+   - Likes:
+      - Users can like and unlike posts.
+   - Follow:
+      - Users can follow and unfollow users.
+   - Profile:
+      - User can update their profile information.
+        - Updating profile
+      ![Profile updating image](src/assets/readme-images/change-profile.png)
+        - Profile updated
+      ![Profile updated image](src/assets/readme-images/profile-changed.png)
+   - All the nav links were manually tested and they all navigated to the correct pages with no issues.
+   - Loggin out redirects users to home page.
+   - Unregistered users will be redirected when trying to edit content that isn't their own.
+   - Registered users can't save their own content.
+   - Thoughts wall is just a wall with thoughts and no other functionality as it was intented to be shared for people to only see and not judge.
+   - Existing users can log in and out with ease.
+   - Unregistered users can become registered by creating a profile.
+   - Site is responsive as it should be.
 
 ### Validator Testing
+#### [CSS Validator](https://jigsaw.w3.org/css-validator/)
+   - CSS files passed through [Jigsaw Validator](https://jigsaw.w3.org/css-validator/) with no errors found. 
+![CSS testing image](src/assets/readme-images/css-testing.png)
+### ESlint
 
 ### Unfixed Bugs
 - All bugs were fixed before submitting this project.
@@ -340,7 +367,6 @@ jwt-decode
 - To deploy manually, click the "Deploy Branch" button.
 - Finally, you'll see "Your app was successfully deployed" pop up message with a "View" button to access the deployed application.
 
-
 ### Step 2:
 #### Connecting API & React
 - To connect API to React, on the DRF-API under the setting tab reveal config Vars and add the following:
@@ -370,7 +396,6 @@ web: serve -s build
 - You can set up "Automatic deploys" by clicking on "Enable Automatic Deploys"
 - To deploy manually, click the "Deploy Branch" button.
 - Finally, you'll see "Your app was successfully deployed" pop up message with a "View" button to access the deployed application.
-
 
 ## Credits
 ### Content
