@@ -37,10 +37,10 @@ A DRF_API was created to support all backend functionalities needed for this app
       - [Sign up page](#Sign-up-page)
       - [Profile page](#Profile-page) 
    - [C.R.U.D](#CRUD)
-      - [Create thought](#Create-Comment)
-      - [Read thought](#Read-Comment)
-      - [Edit thought](#Edit-Comment-Page)
-      - [Delete thought](#Delete-Comment-Page)
+      - [Create Thought](#Create-Thought)
+      - [Read Thought](#Read-Thought)
+      - [Edit Thought](#Edit-Thought)
+      - [Delete Thought](#Delete-Thought)
    - [Features Left to Implement](#Features-Left-to-Implement)
 
 - [Technologies Used](#Technologies-Used)
@@ -225,7 +225,7 @@ Few examples of the CRUD functionality:
 #### Read Thought
 - Once thought has been shared, users can then view and read it.
 ![Read Thought image](src/assets/readme-images/read-thought.png)
-#### Update Thought
+#### Edit Thought
 - Users are then capable of updating and editing the best to suit them.
    - The content characters are limited to a certian number. 
 ![Update Thought image](src/assets/readme-images/update-thought.png)
