@@ -66,7 +66,7 @@ A DRF_API was created to support all backend functionalities needed for this app
    - [Validator Testing](#Validator-Testing)
       - [CSS Validator](#CSS-Validator)
       - [ESlint Testing](#ESlint-Testing)
-      - [Lighthouse Validator](#Lighthouse-Validator)  
+      - [Lighthouse Performance](#Lighthouse-Performance)  
    - [Unfixed Bugs](#Unfixed-Bugs)
 
 - [Deployment](#Deployment)
@@ -377,6 +377,8 @@ eslintrc.json
 
 - JSX code was also ran through an online [ESLint](https://eslint.org/play/) validator for extra checks. Below shows an example of no errors observed.
 ![Thought wall eslint testing online image](/src/assets/readme-images/thought-wall-eslint.png)
+### Lighthouse Performance
+![Lighthouse performance image](/src/assets//readme-images/lighthouse-performance.png)
 ### Unfixed Bugs
 - All bugs were fixed before submitting this project.
 
