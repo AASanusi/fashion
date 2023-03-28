@@ -6,7 +6,7 @@ Fashion is a social media platform created for the fashion community to interact
 
 Please find the link to "Fashion" live site [HERE](https://fashion-react.herokuapp.com/)
 
-A DRF_API was created to support all backend functionalities needed for this application to work. You can find all the information regarding DRF-API ![HERE](https://github.com/AASanusi/fshn-api) to which you'll find all the planning, setup , installationa, deployment and overall information regarding the DRF-API.
+A DRF_API was created to support all backend functionalities needed for this application to work. You can find all the information regarding DRF-API [HERE](https://github.com/AASanusi/fshn-api) to which you'll find all the planning, setup , installationa, deployment and overall information regarding the DRF-API.
 
 #### DEPLOYED BACKEND API [LINK](https://fshn-api.herokuapp.com/)
 #### DEPLOYED BACKEND API  [REPOSITORY](https://github.com/AASanusi/fshn-api)
