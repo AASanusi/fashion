@@ -166,17 +166,19 @@ Google Fonts was used for all the fonts on this application.
 
 ### Wireframes
 #### Home Wireframe:
-![]()
+![Home Wireframe image](/src/assets/readme-images/home-wireframe.png)
 #### Mobile Wireframe:
-![]()
+![Mobile Wireframe image](/src/assets/readme-images/mobile-wireframe.png)
+#### Thought Wireframe:
+![Thought Wireframe image](/src/assets/readme-images/thought-wireframe.png)
 #### Profile Wireframe:
-![]()
+![Profile Wireframe image](/src/assets/readme-images/profile-wireframe.png)
 
 ### Database Entity Relationship Diagram:
-![Database ERD](/src/assets/readme-images/database-erd.png)
+![Database ERD image](/src/assets/readme-images/database-erd.png)
 
 ### Colour Palette:
-![Colour Palette](/src/assets/readme-images/colour-palette.png)
+![Colour Palette image](/src/assets/readme-images/colour-palette.png)
 
 ## Features
 ### Existing Features
@@ -374,7 +376,7 @@ eslintrc.json
 - There were no errors found. Although when deploying I can across a few issues which led me to reinstall npm again and also removed React imports for my code.
 
 - JSX code was also ran through an online [ESLint](https://eslint.org/play/) validator for extra checks. Below shows an example of no errors observed.
-![Thought wall eslint testing online](/src/assets/readme-images/thought-wall-eslint.png)
+![Thought wall eslint testing online image](/src/assets/readme-images/thought-wall-eslint.png)
 ### Unfixed Bugs
 - All bugs were fixed before submitting this project.
 
