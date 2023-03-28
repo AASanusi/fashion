@@ -1,6 +1,6 @@
 # Fashion
 
-Fashion is a social media platform created for the fashion community to interact with each other. It's for designers, stylist, brands and creatives to promote and share their take on fashion. This platform provides space for all of these creatives to interact with each and possibly collaborate. Users will be able to share their thoughts on the current climates in the fashion industry. They will also be able to post what they are working on, promote their clothing brands and to which users can then save these posts as a potentioal inspiration piece to check for or just due to admiring the content of the post.
+Fashion is a social media platform created for the fashion community to interact with each other. It's for designers, stylist, brands and creatives to promote and share their take on fashion. This platform provides space for all of these creatives to interact with each and possibly collaborate. Users will be able to share their thoughts, post what they are working on, promote their clothing brands, save their favourite posts and many more.
 
 ![Am I Responsive image](/src/assets/readme-images/responsiveness.png)
 
@@ -16,8 +16,6 @@ A DRF_API was created to support all backend functionalities needed for this app
    - [Aim](#Aim)
    - [Target Audience](#Target-Audience)
    - [User Stories](#User-Stories)
-      - [Admin Stories](#Admin-Stories)
-      - [User Stories](#User-Stories)
    - [User Goals](#User-Goals)
       - [First Time Users](#First-Time-Users)
       - [Revisiting Users](#Revisiting-Users)
@@ -25,7 +23,7 @@ A DRF_API was created to support all backend functionalities needed for this app
 - [Design](#Design)
    - [Typography](#Typography)
    - [Wireframes](#Wireframes)
-   - [Entity Relationship Diagram](#Entity-Relationship-Diagram)
+   - [Database Entity Relationship Diagram](#Database-Entity-Relationship-Diagram)
    - [Colour Palette](#Colour-Palette)
 
 
