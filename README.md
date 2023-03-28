@@ -330,7 +330,7 @@ Few examples of the CRUD functionality:
    - CSS files passed through [Jigsaw Validator](https://jigsaw.w3.org/css-validator/) with no errors found. 
 ![CSS testing image](src/assets/readme-images/css-testing.png)
 ### ESlint
-
+- Please find the proof of my JSX code that has been passed through [Eslint](https://eslint.org/play/) in a new file - [TESTING.MD](/TESTING.md).
 ### Unfixed Bugs
 - All bugs were fixed before submitting this project.
 
