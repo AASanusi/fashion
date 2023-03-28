@@ -46,17 +46,19 @@ A DRF_API was created to support all backend functionalities needed for this app
 - [Technologies Used](#Technologies-Used)
    - [Languages Used](#Languages-Used)
    - [Frameworks, Libraries And Programs Used](#Frameworks-Libraries-And-Programs-Used)
+      - [Font Awesome](#Font-Awesome)
+      - [Google Fonts](#Google-Fonts)
       - [Balsamiq](#Balsamiq)
-      - [Smartdraw](#Smartdraw)
+      - [Lucid Chart](#Lucid-Chart)
       - [Git](#Git)   
       - [Gitpod](#Gitpod)
       - [Github](#Github)
-      - [Gitpod Python Essentials Template](#Gitpod-Python-Essentials-Template)
       - [Heroku](#Heroku)
       - [PostgreSQL](#PostgreSQL)
       - [ElephantSQL](#ElephantSQL)
-      - [Google Fonts](#Google-Fonts)
       - [Favicon](#Favicon)
+      - [ReactJS](#ReactJS)
+      - [React-Bootstrap](#React-Bootstrap)
    - [Installed Packages](#Installed-Packages)
 
 - [Testing](#Testing)
@@ -270,28 +272,22 @@ Few examples of the CRUD functionality:
 7. #### [Github:](https://github.com/)
    - Github was used to hold and keep the pushed codes by Git and store projects.
 
-8. #### [Gitpod Python Essentials Template:](https://github.com/Code-Institute-Org/python-essentials-template)
-   - Gitpod Python Essentials Template was provided by code institute and it consisted of all the relevant tools needed for the successful running of the application.
-
-9. #### [Heroku](https://id.heroku.com/login)
+8. #### [Heroku](https://id.heroku.com/login)
    - Heroku was used to deploy the project.
 
-10. #### [PostgreSQL](https://www.postgresql.org/)
+9. #### [PostgreSQL](https://www.postgresql.org/)
    - This was used for database.
 
-11. #### [ElephantSQL](https://www.elephantsql.com/)
+10. #### [ElephantSQL](https://www.elephantsql.com/)
    - This was used as the new database.
 
-12. #### [Google Fonts](https://fonts.google.com/about)
-   - This was used to form the fonts for the page.
-
-13. #### [Favicon](https://www.favicon.cc/)
+12. #### [Favicon](https://www.favicon.cc/)
    - This was used to create an icon for the site tab.
 
-14. #### [ReactJS](https://react.dev/)
+13. #### [ReactJS](https://react.dev/)
     - This was used to create the components required to build a fully front-end application
 
-15. #### [React-Bootstrap](https://react-bootstrap.github.io/)
+14. #### [React-Bootstrap](https://react-bootstrap.github.io/)
     - Used to style the layout and design of the application.
 
 ## Testing
