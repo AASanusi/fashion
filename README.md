@@ -2,7 +2,7 @@
 
 Fashion is a social media platform created for the fashion community to interact with each other. It's for designers, stylist, brands and creatives to promote and share their take on fashion. This platform provides space for all of these creatives to interact with each and possibly collaborate. Users will be able to share their thoughts on the current climates in the fashion industry. They will also be able to post what they are working on, promote their clothing brands and to which users can then save these posts as a potentioal inspiration piece to check for or just due to admiring the content of the post.
 
-![]()
+![Am I Responsive image](/src/assets/readme-images/responsiveness.png)
 
 Please find the link to "Fashion" live site [HERE](https://fashion-react.herokuapp.com/)
 
@@ -330,7 +330,51 @@ Few examples of the CRUD functionality:
    - CSS files passed through [Jigsaw Validator](https://jigsaw.w3.org/css-validator/) with no errors found. 
 ![CSS testing image](src/assets/readme-images/css-testing.png)
 ### ESlint
-- Please find the proof of my JSX code that has been passed through [Eslint](https://eslint.org/play/) in a new file - [TESTING.MD](/TESTING.md).
+- JSX code was passed through [ESLint](https://eslint.org/) to carry out the tests. There were no ternminal errors or warning observed when testing was done. The setup for this was carried by following the steps on [ESLint](https://eslint.org/docs/latest/use/getting-started):
+1. Install npm via this command
+```
+npm init @eslint/config
+```
+2. The below file will be created once installed:
+```
+eslintrc.json
+```
+3. The following code was then added to check for errors
+```
+{
+	"env": {
+		"browser": true,
+		"es2021": true
+	},
+	"extends": [
+		"eslint:recommended",
+		"plugin:react/recommended",
+		"plugin:react/jsx-runtime"
+	],
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": 11,
+		"sourceType": "module"
+	},
+	"plugins": ["react"],
+	"rules": {
+		"react/no-unescaped-entities": ["error", { "forbid": [">", "}"] }],
+		"react/prop-types": [0, { "ignore": ["children"] }],
+		"react/no-children-prop": [
+			0,
+			{
+				"allowFunctions": true
+			}
+		]
+	}
+}
+```
+- There were no errors found. Although when deploying I can across a few issues which led me to reinstall npm again and also removed React imports for my code.
+
+- JSX code was also ran through an online [ESLint](https://eslint.org/play/) validator for extra checks. Below shows an example of no errors observed.
+![Thought wall eslint testing online](/src/assets/readme-images/thought-wall-eslint.png)
 ### Unfixed Bugs
 - All bugs were fixed before submitting this project.
 
