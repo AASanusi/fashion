@@ -465,6 +465,7 @@ web: serve -s build
 - Thanks to Tony for proviing me with help with the requirement.txt file which caused deployment issues.
 - Thanks to Lauren-Nicole for helping me to optimise my thoughts form.
 - Thanks Tom for providing help with the MoreDroDown function.
+- Thanks to Tom who helped me aided me with setting up eslint and have it working for me.
 - #### Mentor
 - Thanks to my Mentor for providing with resources to help to form my project.
 - Thanks to my Mentor for sharing knowledge and experience about the industry to help me with building.
