@@ -1,12 +1,12 @@
 # Fashion
 
-Fashion is a social media platform created for the fashion community to interact with each other. It's for designers, stylist, brands and creatives to promote and share their thoughts fashion. This platform provides space for all of these creatives to interact with each and possibly collaborate. Users will be able to share their thoughts, post what they are working on, promote their clothing brands, save their favourite posts and many more.
+Fashion is a social media platform created for the fashion community to interact with each other. It's for designers, stylist, brands and creatives to promote and share their thoughts on fashion. This platform provides a space for all of these users to interact and collaborate. Users will be able to share their thoughts, post what they are working on, promote their clothing brands, save their favourite posts and many more.
 
 ![Am I Responsive image](/src/assets/readme-images/responsiveness.png)
 
 Please find the link to "Fashion" live site [HERE](https://fashion-react.herokuapp.com/)
 
-A DRF_API was created to support all backend functionalities needed for this application to work. You can find all the information regarding DRF-API [HERE](https://github.com/AASanusi/fshn-api) to which you'll find all the planning, setup , installationa, deployment and overall information regarding the DRF-API.
+A DRF_API was created to support all backend functionalities needed for this application to work. You can find all the information regarding DRF-API [HERE](https://github.com/AASanusi/fshn-api) to which you'll find all the planning, setup , installation and deployment
 
 #### DEPLOYED BACKEND API [LINK](https://fshn-api.herokuapp.com/)
 #### DEPLOYED BACKEND API  [REPOSITORY](https://github.com/AASanusi/fshn-api)
@@ -82,13 +82,13 @@ A DRF_API was created to support all backend functionalities needed for this app
 ## User Experience (UX)
 
 ### Aim
-The aim of this application is to provide a platform for users to interact with each other through sharing their thougts, posting fashion, save posts that they like, following pages you enjoy, liking and commenting. This allows users to get the full experience of the app and engulf themselves in the fashion community.
+The aim of this application is to provide a platform for users to interact with each other through sharing their thoughts, posting fashion, save posts that they like, following pages they enjoy, liking and commenting. This allows users to get the full experience of the application and be part of the fashion community.
 
 ### Target Audience
-For the fashion community which ranges from high-end brands, underground brands, people who want expand their fashion palette, stylist and artist who would like to collaborate.
+Diverse audience that ranges from high-end brands, underground brands, people who want to expand their fashion palette, stylist and artist who would like to collaborate.
 
 ### User Stories
-To aid with viewing the users stories, you can click links to [Github Issues](https://github.com/AASanusi/fashion/issues). You can also view the [KANBAN board](https://github.com/users/AASanusi/projects/2).
+To help with viewing the users stories, click the link to the [Github Issues](https://github.com/AASanusi/fashion/issues) and the [KANBAN board](https://github.com/users/AASanusi/projects/2).
 #### Epic 1: Navigation
 1. As a user I can view user's avatars so that I can easily identify users of the application.
 2. As a user I can view a navbar from every page so that I can navigate easily between pages.
@@ -135,9 +135,9 @@ To aid with viewing the users stories, you can click links to [Github Issues](ht
 ### User Goals
 #### First Time Users
 - As a first time user, I want to be able to access the site.
-- As a first time user, I want to be able to view application without having to register.
+- As a first time user, I want to be able to view site without having to register.
 - As a first time user, I want to be able to register to the the site.
-- As a first time user, I want to be able to view with posts such as viewing, liking and commenting.
+- As a first time user, I want to be able to interact with posts such as viewing, liking and commenting.
 - As a first time user, I want to be able to view profile pages.
 - As a first time user, I want to be able to follow users.
 - As a first time user, I want to be able to create posts.
@@ -147,7 +147,7 @@ To aid with viewing the users stories, you can click links to [Github Issues](ht
 - As a first time user, I want to be able to view all the saved posts.
 
 #### Revisiting Users
-- As a revisiting user, I want to be able to login back into the site.
+- As a revisiting user, I want to be able to log back into the site.
 - As a revisiting user, I want to be able to view more posts.
 - As a revisiting user, I want to be able to unsave posts.
 - As a revisiting user, I want to be able to edit posts.
@@ -160,7 +160,7 @@ To aid with viewing the users stories, you can click links to [Github Issues](ht
 ## Design
 
 ### Typography
-Google Fonts was used for all the fonts on this application.
+The following fonts were taken from [Google Fonts](https://fonts.google.com/) and used throughout the site:
 - Anton font family
 - Libre Baskerville font family
 
@@ -183,39 +183,39 @@ Google Fonts was used for all the fonts on this application.
 ## Features
 ### Existing Features
 #### Home page
-- The home page showcases what the application is about and what you can do and view.
-- Both Unregisted and registered users can view the home.
-- Only regsitered users can save, like and comment.
+- The home page showcases what the application is about and what you can do and view
+- Both Unregisted and registered users can view the home
+- Only regsitered users can save, like and comment
 - ##### Home Page desktop
 ![Home Page desktop image](src/assets/readme-images/home-page.png)
 - ##### Home Page mobile
 ![Home Page mobile image](src/assets/readme-images/home-page-mobile.png)
 #### Navigation bar
-- The navigation bar consists of all the icons with links to all the pages.
-- What users can view changes depending if they are signed in or not (see below images)
+- The navigation bar consists of all the icons with links to all the pages
+- The pages available to users in the navigation depends if they are signed in or not (see below images)
 - ##### Navigation bar when user sign in
 ![Sign in Navigation bar image](src/assets/readme-images/sign-in-nav.png)
 - ##### Navigation bar when user sign out
 ![Sign out Navigation bar image](src/assets/readme-images/sign-out-nav.png)
-#### Thought Wall
-- A thought wall is a page that consists of all users thoughts.
-- This is for registered users to share their burning thoughts and have it on a wall for everyone to see.
-- On the wall they can let us know their random locations, what they are thinking and what mood they are in.
+#### Thoughts Wall
+- Thoughts wall is a page that consists of all users thoughts
+- This is for registered users to share their burning thoughts and have it on a wall for everyone to see
+- On the wall, users can let us know their random locations, what they are thinking and what mood they are in
 ![Thought Wall image](src/assets/readme-images/thought-wall.png)
 #### Saved Page
-- This page consists of all the posts the user likes and would wanna see again.
-- Only registered users can save and view this page.
+- This page consists of all the users favourite posts
+- Only registered users can save and view this page
 ![Saved Page image](src/assets/readme-images/saved-page.png)
 #### Sign in page
-- Any user can sign into this page once registered.
+- Users can sign in once registered
 ![Sign in page image](src/assets/readme-images/sign-in-page.png)
 #### Sign up page
-- An easy sign up form to have users registered to the application.
+- An easy sign up form to register users
 ![Sign up page image](src/assets/readme-images/sign-up-page.png)
 #### Profile page
-- The profile page consists of the user avatar and name.
-- It has the users statistics for people to see such as posts, thoughts, following and followers.
-- It also has the posts and the thoughts the users have posted and shared.
+- The profile page consists of the user avatar and name
+- It consists of the users posts, thoughts, following and followers statistics
+- It also has the posts and the thoughts wall the users have posted and shared
 ![Profile page image](src/assets/readme-images/profile-page.png)
 
 
@@ -225,22 +225,22 @@ Few examples of the CRUD functionality:
 - Registered users are capable of creating and sharing a thought
 ![Create Thought image](src/assets/readme-images/create-thought.png)
 #### Read Thought
-- Once thought has been shared, users can then view and read it.
+- Once thought has been shared, users can then view and read it
 ![Read Thought image](src/assets/readme-images/read-thought.png)
 #### Edit Thought
-- Users are then capable of updating and editing the best to suit them.
-   - The content characters are limited to a certian number. 
+- Users are then capable of updating and editing (content characters are limited) 
 ![Update Thought image](src/assets/readme-images/update-thought.png)
 #### Delete Thought
-- Users can then delete the thought if they no longer what it on the wall.
+- Users can then delete the thought if they no longer what it on their wall
 ![Delete Thought image](src/assets/readme-images/delete-thought.png)
 
 ### Features Left to Implement
-- To implement notifications so that users can see when other posts.
-- To implement direct messaging for users to communicate.
-- Increase the word count for posting thoughts.
-- For users to be able to repost other users posts or thoughts.
-- To create a function that syncs the users location when providing their location on fot thoughts rather than having to write it.
+Due to time and complexity, I wasn't able to implement certain features. Future implementations can be observed below:
+- To implement notifications so that users can see when other users posts
+- To implement direct messaging for users to communicate
+- Increase the word count for posting thoughts
+- For users to be able to repost other users posts or thoughts
+- To create a function that syncs the users location when providing their location
 
 ## Technologies Used
 ### Languages Used
@@ -254,7 +254,7 @@ Few examples of the CRUD functionality:
 1. #### [Font Awesome](https://fontawesome.com/)
    - Font awesome icons were used to create the NavBar pages links.
 
-2. #### [Google Fonts](https://balsamiq.com/)
+2. #### [Google Fonts](https://fonts.google.com/)
    - Used for all texts created on this application.
 
 3. #### [Balsamiq](https://balsamiq.com/)
@@ -270,7 +270,7 @@ Few examples of the CRUD functionality:
    - Gitpod is the Integrated Developer Environment used to code this project.
 
 7. #### [Github:](https://github.com/)
-   - Github was used to hold and keep the pushed codes by Git and store projects.
+   - Github was used to hold and keep the pushed codes by Git and store projects
 
 8. #### [Heroku](https://id.heroku.com/login)
    - Heroku was used to deploy the project.
@@ -285,33 +285,33 @@ Few examples of the CRUD functionality:
    - This was used to create an icon for the site tab.
 
 13. #### [ReactJS](https://react.dev/)
-    - This was used to create the components required to build a fully front-end application
+    - This was used to create the components required to build a full front-end application.
 
 14. #### [React-Bootstrap](https://react-bootstrap.github.io/)
     - Used to style the layout and design of the application.
 
 ### Components
-- The section is to provide information on the numerous compnents that were created to be reused throught the development of the project.
+- Numerous components were created and reused throughout the development of the project.
 #### Assets.js
 - This provides a loading spinner throughout the site to which provides better UX.
 #### Avatar.js
 - User avatar used across the site to showcase users as they interact with different pages.
 #### MoreDropdown.js
-- Allows users to be able to edit and delete, ranging from their thoughts to posts and many more.
+- Allows users to be able to edit and delete their thoughts, posts and many more.
 #### NavBar.js
-- This is useful as it's observed across all pages and changes depending is user is logged in/out.
+- This is useful as it's observed across all pages and changes depending if user is logged in/out.
 #### NotFound.js
-- Uses Asset component to provide message to users when searching for incorrect pages.
+- Uses Asset component and provide message to users when searching for pages that do not exists.
 #### utils.js
-- provides all components with the functionality to uses infinite scroll.
+- Provides all components with the functionality to use infinite scroll.
 #### useRedirect.js
 - This redirects users to another page if they aren't authorised for that page.
 #### CurrentUserContext.js
-- This provides the functionality avaliable for the user based on the logged in status.
+- This provides the functionality availability for users based on the logged in status.
 #### ProfileDataContext.js
 - Provides the follow and unfollow functionality for users across the page.
 #### axiosDefault.js
-- This was to allow smooth communication with the backend API.
+- To allow smooth communication with the backend API.
 
 ## Testing
 
@@ -336,12 +336,12 @@ Few examples of the CRUD functionality:
         - Profile updated
       ![Profile updated image](src/assets/readme-images/profile-changed.png)
    - All the nav links were manually tested and they all navigated to the correct pages with no issues.
-   - Loggin out redirects users to home page.
+   - Logging out redirects users to home page.
    - Unregistered users will be redirected when trying to edit content that isn't their own.
    - Registered users can't save their own content.
    - Thoughts wall is just a wall with thoughts and no other functionality as it was intented to be shared for people to only see and not judge.
    - Existing users can log in and out with ease.
-   - Unregistered users can become registered by creating a profile.
+   - Unregistered users can easily register by creating a profile.
    - Site is responsive as it should be.
 
 ### Validator Testing
@@ -390,11 +390,12 @@ eslintrc.json
 	}
 }
 ```
-- There were no errors found. Although when deploying I can across a few issues which led me to reinstall npm again and also removed React imports for my code.
+- There were no errors found. There was was deployment issues which were fixed by reinstalling "npm" again.
 
-- JSX code was also ran through an online [ESLint](https://eslint.org/play/) validator for extra checks. Below shows an example of no errors observed.
+- JSX code was also passed through an online [ESLint](https://eslint.org/play/) validator for extra checks. Below shows an example of no errors observed.
 ![Thought wall eslint testing online image](/src/assets/readme-images/thought-wall-eslint.png)
 ### Lighthouse Performance
+- Accessibility of the page is excellent and the slight dip in performance is due to the images that were loaded on the page.
 ![Lighthouse performance image](/src/assets//readme-images/lighthouse-performance.png)
 ### Unfixed Bugs
 - All bugs were fixed before submitting this project.
@@ -443,11 +444,11 @@ Key: CLIENT_ORIGIN_DEV | Value: https://gitpod-browser-link.ws-eu92.gitpod.io
 
 ### Step 3:
 ####  Deployment to Heroku
-- Make sure the below is in your package,json and if not, add the below to the scripts section:
+- Make sure the below is in your package.json and if not, add the below to the scripts section:
 ```
 "heroku-prebuild": "npm install -g serve",
 ```
-- Create a Profile on the level of the repository and insert the below in it:
+- Create a Procfile and insert the below in it:
 ```
 web: serve -s build
 ```
@@ -479,14 +480,13 @@ web: serve -s build
 - Thanks to Ed for helping me sort the statistics for my thoughts count and sorting it out on my API.
 - Thanks to Gemma for providing help with my thought form when it's updated.
 - #### Fellow classmates/aluminis on Slack
-- Thanks to Tony for proviing me with help with the requirement.txt file which caused deployment issues.
+- Thanks to Tony for providing me with help with the requirement.txt file which caused deployment issues.
 - Thanks to Lauren-Nicole for helping me to optimise my thoughts form.
-- Thanks Tom for providing help with the MoreDroDown function.
-- Thanks to Tom who helped me aided me with setting up eslint and have it working for me.
+- Thanks Tom for providing help with the MoreDroDown function and showing me how to setup eslint properly.
 - #### Mentor
-- Thanks to my Mentor for providing with resources to help to form my project.
-- Thanks to my Mentor for sharing knowledge and experience about the industry to help me with building.
-- Thanks to my mentor for providing constructive critiscm on my project to help me improve it.
+- Thanks to my Mentor for providing me with resources to help me with this project.
+- Thanks to my Mentor for sharing knowledge and experience which aided me in building this project.
+- Thanks to my mentor for providing constructive criticisms on my project to help me improve it.
 
 
 
