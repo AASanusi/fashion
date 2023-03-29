@@ -59,7 +59,7 @@ A DRF_API was created to support all backend functionalities needed for this app
       - [Favicon](#Favicon)
       - [ReactJS](#ReactJS)
       - [React-Bootstrap](#React-Bootstrap)
-   - [Installed Packages](#Installed-Packages)
+   - [Components](#Components)
 
 - [Testing](#Testing)
    - [Manual Testing](#Manual-Testing)
@@ -290,6 +290,29 @@ Few examples of the CRUD functionality:
 14. #### [React-Bootstrap](https://react-bootstrap.github.io/)
     - Used to style the layout and design of the application.
 
+### Components
+- The section is to provide information on the numerous compnents that were created to be reused throught the development of the project.
+#### Assets.js
+- This provides a loading spinner throughout the site to which provides better UX.
+#### Avatar.js
+- User avatar used across the site to showcase users as they interact with different pages.
+#### MoreDropdown.js
+- Allows users to be able to edit and delete, ranging from their thoughts to posts and many more.
+#### NavBar.js
+- This is useful as it's observed across all pages and changes depending is user is logged in/out.
+#### NotFound.js
+- Uses Asset component to provide message to users when searching for incorrect pages.
+#### utils.js
+- provides all components with the functionality to uses infinite scroll.
+#### useRedirect.js
+- This redirects users to another page if they aren't authorised for that page.
+#### CurrentUserContext.js
+- This provides the functionality avaliable for the user based on the logged in status.
+#### ProfileDataContext.js
+- Provides the follow and unfollow functionality for users across the page.
+#### axiosDefault.js
+- This was to allow smooth communication with the backend API.
+
 ## Testing
 
 ### Manual Testing
@@ -325,7 +348,7 @@ Few examples of the CRUD functionality:
 #### [CSS Validator](https://jigsaw.w3.org/css-validator/)
    - CSS files passed through [Jigsaw Validator](https://jigsaw.w3.org/css-validator/) with no errors found. 
 ![CSS testing image](src/assets/readme-images/css-testing.png)
-### ESlint
+### ESlint Testing
 - JSX code was passed through [ESLint](https://eslint.org/) to carry out the tests. There were no ternminal errors or warning observed when testing was done. The setup for this was carried by following the steps on [ESLint](https://eslint.org/docs/latest/use/getting-started):
 1. Install npm via this command
 ```
