@@ -1,6 +1,6 @@
 # Fashion
 
-Fashion is a social media platform created for the fashion community to interact with each other. It's for designers, stylist, brands and creatives to promote and share their take on fashion. This platform provides space for all of these creatives to interact with each and possibly collaborate. Users will be able to share their thoughts, post what they are working on, promote their clothing brands, save their favourite posts and many more.
+Fashion is a social media platform created for the fashion community to interact with each other. It's for designers, stylist, brands and creatives to promote and share their thoughts fashion. This platform provides space for all of these creatives to interact with each and possibly collaborate. Users will be able to share their thoughts, post what they are working on, promote their clothing brands, save their favourite posts and many more.
 
 ![Am I Responsive image](/src/assets/readme-images/responsiveness.png)
 
